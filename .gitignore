@@ -1,0 +1,211 @@
+@@ -1 +1 @@
+node_modules 	node_modules/ 
+  8  
+StudyBeatsFM/src/App.jsx
+@@ -1,54 +1,54 @@
+import './styles/index.css'	import './styles/index.css'
+import './styles/audioControl.css'	import './styles/audioControl.css'
+import { useEffect, useState } from 'react'	import { useEffect, useState } from 'react'
+import AdditionSettings from './components/additionalInfo'	import AdditionSettings from './components/additionalInfo'
+import sythnWave from './Videos/Electronic-Gems.mp4'	import sythnWave from './Videos/Electronic-Gems.mp4'
+import DreamsScape from './Videos/DreamsScape.mp4'	import DreamsScape from './Videos/DreamsScape.mp4'
+import LofiGirl from './Videos/LofiGirl.mp4'	import LofiGirl from './Videos/LofiGirl.mp4'
+import TheJazzHopCafe from './Videos/TheJazzHopCafe.mp4'	import TheJazzHopCafe from './Videos/TheJazzHopCafe.mp4'
+import ChilledCow from './Videos/ChilledCow.mp4'	import ChilledCow from './Videos/ChilledCow.mp4'
+import AstralThrob from './Videos/AstralThrob.mp4'	import AstralThrob from './Videos/AstralThrob.mp4'
+import AnimeVibe from './Videos/AnimeVibe.mp4'	import AnimeVibe from './Videos/AnimeVibe.mp4'
+import HFiveGOne from './Videos/H5G1Music.mp4'	import HFiveGOne from './Videos/H5G1Music.mp4'
+import Intro from './Videos/intro.mp4'	import Intro from './Videos/intro.mp4'
+import cloudHop from './Videos/cloudHop.mp4'	import cloudHop from './Videos/cloudHop.mp4'
+import slowReverb from './Videos/slowreverb.mp4'	import slowReverb from './Videos/slowreverb.mp4'
+import ChillHipHop from './Videos/ChillHipHop.mp4'	import ChillHipHop from './Videos/ChillHipHop.mp4'
+import triangle from './images/playBtn.png'	import triangle from './images/playBtn.png'
+import github from './images/github.png'	import github from './images/github.png'
+import ElectronicGemsRadio from './RadioStation/ElectronicGems'	import ElectronicGemsRadio from './RadioStation/ElectronicGems'
+import AnimeVibeStation from './RadioStation/AnimeVibe'	import AnimeVibeStation from './RadioStation/AnimeVibe'
+import ChilledCowRadio from './RadioStation/ChilledCow'	import ChilledCowRadio from './RadioStation/ChilledCow'
+import SlowReverbRadio from './RadioStation/SlowReverb'	import SlowReverbRadio from './RadioStation/SlowReverb'
+import DreamScapeRadio from './RadioStation/DreamScape'	import DreamScapeRadio from './RadioStation/DreamScape'
+import AstralThrobRadio from './RadioStation/AstralThrob'	import AstralThrobRadio from './RadioStation/AstralThrob'
+import LofiGirlRadio from './RadioStation/LofiGirl'	import LofiGirlRadio from './RadioStation/LofiGirl'
+import CloudHopRadio from './RadioStation/CloudHop'	import CloudHopRadio from './RadioStation/CloudHop'
+import H5G1Radio from './RadioStation/H5G1'	import H5G1Radio from './RadioStation/H5G1'
+import ChillHopRadio from './RadioStation/ChillHop'	import ChillHopRadio from './RadioStation/ChillHop'
+import play from './images/playBtn.png'	import play from './images/playBtn.png'
+import pauseImg from './images/pause.png'	import pauseImg from './images/pause.png'
+import skipBack from './images/skipBack.png'	import skipBack from './images/skipBack.png'
+import skipFoward from './images/skipForward.png'	import skipFoward from './images/skipForward.png'
+import volumeOn from './images/volumeOn.png'	import volumeOn from './images/volumeOn.png'
+import mute from './images/mute.png'	import mute from './images/mute.png'
+import { motion } from "framer-motion"	import { motion } from "framer-motion"
+let lastPlayedVolume = 0;	let lastPlayedVolume = 0;
+function App() {	function App() {
+
+
+
+
+  const [BtnClass, setBtnClass] = useState("PlayPause")           //pause play change	  const [BtnClass, setBtnClass] = useState("PlayPause2")           //pause play change
+  const [BtnClass2, setBtnClass2] = useState("playBtn")	  const [BtnClass2, setBtnClass2] = useState("playBtn2")
+  const [playPauseImg, setPlayPause] = useState(play)	  const [playPauseImg, setPlayPause] = useState(pauseImg)
+
+
+  const [muteCheck, setUnmute] = useState("volumeOn")             //unmute/mute change	  const [muteCheck, setUnmute] = useState("volumeOn")             //unmute/mute change
+  const [muteCheck2, setUnmute2] = useState("audioOnImg")	  const [muteCheck2, setUnmute2] = useState("audioOnImg")
+  const [volumeImg, setVolumeImg] = useState(volumeOn)	  const [volumeImg, setVolumeImg] = useState(volumeOn)
+
+
+
+
+  const [stationName, setStationName] = useState("")	  const [stationName, setStationName] = useState("LofiGirl")
+
+
+  const [songIndex, setSongIndex] = useState(0)	  const [songIndex, setSongIndex] = useState(0)
+  const [song, setStation] = useState(LofiGirlRadio)     //station 	  const [song, setStation] = useState(LofiGirlRadio)     //station 
+  24  
+StudyBeatsFM/src/RadioStation/AnimeVibe.js
+  21  
+StudyBeatsFM/src/RadioStation/AstralThrob.js
+  30  
+StudyBeatsFM/src/RadioStation/ChillHop.js
+  30  
+StudyBeatsFM/src/RadioStation/ChilledCow.js
+@@ -1,36 +1,36 @@
+import alone from '../Music/ChilledCow/Alone Time.mp3'	import alone from '../Music/ChilledCow/Alone Time.mp3'
+import ambulo from '../Music/ChilledCow/Ambulo x mell-ø – Luminescence.mp3'	import ambulo from '../Music/ChilledCow/Ambulo x mell-ø – Luminescence.mp3'
+import carried from '../Music/ChilledCow/Carried Away.mp3'	import carried from '../Music/ChilledCow/Carried Away.mp3'
+import cotten from '../Music/ChilledCow/Cotton Cloud.mp3'	import cotten from '../Music/ChilledCow/Cotton Cloud.mp3'
+import cuddlin from '../Music/ChilledCow/Cuddlin.mp3'	import cuddlin from '../Music/ChilledCow/Cuddlin.mp3'
+import espresso from '../Music/ChilledCow/Espresso.mp3'	import espresso from '../Music/ChilledCow/Espresso.mp3'
+import glimlip from '../Music/ChilledCow/glimlip x cocabona - Drops.mp3'	import glimlip from '../Music/ChilledCow/glimlip x cocabona - Drops.mp3'
+import sorry from '../Music/ChilledCow/Sorry.mp3'	import sorry from '../Music/ChilledCow/Sorry.mp3'
+import mell from '../Music/ChilledCow/mell-ø - nova.mp3'	import mell from '../Music/ChilledCow/mell-ø - nova.mp3'
+import reflection from '../Music/ChilledCow/Reflections.mp3'	import reflection from '../Music/ChilledCow/Reflections.mp3'
+import single from '../Music/ChilledCow/Single Phial.mp3'	import single from '../Music/ChilledCow/Single Phial.mp3'
+import walk from '../Music/ChilledCow/The Places We Used to Walk.mp3'	import walk from '../Music/ChilledCow/The Places We Used to Walk.mp3'
+import mine from '../Music/ChilledCow/Wish You Were Mine.mp3'	import mine from '../Music/ChilledCow/Wish You Were Mine.mp3'
+import wool from '../Music/ChilledCow/Wool Gloves.mp3'	import wool from '../Music/ChilledCow/Wool Gloves.mp3'
+import snowman from '../Music/ChilledCow/WYS - Snowman.mp3'	import snowman from '../Music/ChilledCow/WYS - Snowman.mp3'
+
+
+
+
+export const ChilledCowRadio = [	export const ChilledCowRadio = [
+    new Audio(snowman),	    new Audio("https://www.mboxdrive.com/WYS - Snowman.mp3"),
+        new Audio(alone),	        new Audio("https://www.mboxdrive.com/Alone Time.mp3"),
+        new Audio(ambulo),	        new Audio("https://www.mboxdrive.com/Ambulo x mell-ø – Luminescence.mp3"),
+        new Audio(carried),	        new Audio("https://www.mboxdrive.com/Carried Away.mp3"),
+        new Audio(cotten),	        new Audio("https://www.mboxdrive.com/Cotton Cloud.mp3"),
+        new Audio(cuddlin),	        new Audio("https://www.mboxdrive.com/Cuddlin.mp3"),
+        new Audio(espresso),	        new Audio("https://www.mboxdrive.com/Espresso.mp3"),
+        new Audio(glimlip),	        new Audio("https://www.mboxdrive.com/glimlip x cocabona - Drops.mp3"),
+        new Audio(sorry),	        new Audio("https://www.mboxdrive.com/Sorry.mp3"),
+        new Audio(mell),	        new Audio("https://www.mboxdrive.com/mell-ø - nova.mp3"),
+        new Audio(reflection),	        new Audio("https://www.mboxdrive.com/Reflections.mp3"),
+        new Audio(single),	        new Audio("https://www.mboxdrive.com/Single Phial.mp3"),
+        new Audio(walk),	        new Audio("https://www.mboxdrive.com/The Places We Used to Walk.mp3"),
+        new Audio(mine),	        new Audio("https://www.mboxdrive.com/Wish You Were Mine.mp3"),
+        new Audio(wool),	        new Audio("https://www.mboxdrive.com/Wool Gloves.mp3"),
+
+
+]	]
+
+
+  28  
+StudyBeatsFM/src/RadioStation/CloudHop.js
+  30  
+StudyBeatsFM/src/RadioStation/DreamScape.js
+@@ -15,21 +15,21 @@ import title from '../Music/DreamScape/tilekid - you not the same (slowed).mp3'
+import lonely from '../Music/DreamScape/you look lonely, i can fix that....mp3'	import lonely from '../Music/DreamScape/you look lonely, i can fix that....mp3'
+
+
+export const DreamScapeRadio = [	export const DreamScapeRadio = [
+    new Audio(ok),	    new Audio("https://www.mboxdrive.com/ok.mp3"),
+    new Audio(error),	    new Audio("https://www.mboxdrive.com/「 error 」- do you love me.mp3"),
+    new Audio(bonjr),	    new Audio("https://www.mboxdrive.com/bonjr.mp3"),
+    new Audio(clams),	    new Audio("https://www.mboxdrive.com/clams.mp3"),
+    new Audio(dye),	    new Audio("https://www.mboxdrive.com/DyE - Fantasy - Official Video.mp3"),
+    new Audio(hnrk),	    new Audio("https://www.mboxdrive.com/hnrk - dimensionstor.mp3"),
+    new Audio(six),	    new Audio("https://www.mboxdrive.com/instupendo - six forty seven (slowed down).mp3"),
+    new Audio(kel),	    new Audio("https://www.mboxdrive.com/karamel kel - aglow (intro) (slowed down & looped).mp3"),
+    new Audio(malo),	    new Audio("https://www.mboxdrive.com/malo.mp3"),
+    new Audio(closer),	    new Audio("https://www.mboxdrive.com/n u a g e s - closer.mp3"),
+    new Audio(thelema),	    new Audio("https://www.mboxdrive.com/øfdream - thelema (slowed & bass boosted).mp3"),
+    new Audio(blade),	    new Audio("https://www.mboxdrive.com/synthwave goose - blade runner 2049.mp3"),
+    new Audio(light),	    new Audio("https://www.mboxdrive.com/there is light in us (slowed down Version).mp3"),
+    new Audio(title),	    new Audio("https://www.mboxdrive.com/tilekid - you not the same (slowed).mp3"),
+    new Audio(lonely),	    new Audio("https://www.mboxdrive.com/you look lonely, i can fix that....mp3"),
+
+
+]	]
+
+
+ 32  
+StudyBeatsFM/src/RadioStation/H5G1.js
+  28  
+StudyBeatsFM/src/RadioStation/LofiGirl.js
+@@ -16,20 +16,20 @@ import take from '../Music/LofiGirl/Take Care.mp3'
+
+
+
+
+export const LofiGirlRadio = 	export const LofiGirlRadio = 
+[   new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"),	[   new Audio("https://www.mboxdrive.com/SweetLook.mp3"),
+    new Audio (Sixam),	    new Audio ("https://www.mboxdrive.com/Take%20Care.mp3"),
+    new Audio (blackout),	    new Audio ("https://www.mboxdrive.com/Missing%20Earth%20(Original%20Mix).mp3"),
+    new Audio (night),	    new Audio ("https://www.mboxdrive.com/kudasai%20-%20technicolor.mp3"),
+    new Audio (attached),	    new Audio ("https://www.mboxdrive.com/Sky%20Cruiser.mp3"),
+    new Audio (dream),	    new Audio ("https://www.mboxdrive.com/kudasai%20-%20when%20i%20see%20you.mp3"),
+    new Audio (darling),	    new Audio ("https://www.mboxdrive.com/kudasai%20-%20sapphire.mp3"),
+    new Audio (sapphire),	    new Audio ("https://www.mboxdrive.com/kudasai%20-%20dream%20of%20her.mp3"),
+    new Audio (technicolor),	    new Audio ("https://www.mboxdrive.com/kudasai - a night together.mp3"),
+    new Audio (girl),	    new Audio ("https://www.mboxdrive.com/kudasai - oh darling.mp3"),
+    new Audio (seeyou),	    new Audio ("https://www.mboxdrive.com/kudasai - attached.mp3"),
+    new Audio (earth),	    new Audio ("https://www.mboxdrive.com/Blackout (Original Mix).mp3"),
+    new Audio (sky),	    new Audio ("https://www.mboxdrive.com/girl.mp3"),
+    new Audio (take),	    new Audio ("https://www.mboxdrive.com/6am.mp3"),
+
+
+]	]
+
+
+  30  
+StudyBeatsFM/src/RadioStation/SlowReverb.js
+@@ -1,36 +1,36 @@
+import caesar from '../Music/SlowReverb/daniel caesar & kali uchis - get you﹝slowed + reverb﹞.mp3'	import caesar from '../Music/SlowReverb/daniel caesar & kali uchis - get you﹝slowed + reverb﹞.mp3'
+import noidea from '../Music/SlowReverb/don toliver - no idea [slowed & reverb].mp3'	import noidea from '../Music/SlowReverb/don toliver - no idea [slowed & reverb].mp3'
+import hotline from '../Music/SlowReverb/drake - hotline bling﹝slowed + reverb﹞.mp3'	import hotline from '../Music/SlowReverb/drake - hotline bling﹝slowed + reverb﹞.mp3'
+import jungle from '../Music/SlowReverb/drake - jungle(slowed+reverb).mp3'	import jungle from '../Music/SlowReverb/drake - jungle(slowed+reverb).mp3'
+ import marvis from '../Music/SlowReverb/drake - marvins room﹝slowed + reverb﹞.mp3'	 import marvis from '../Music/SlowReverb/drake - marvins room﹝slowed + reverb﹞.mp3'
+ import room from '../Music/SlowReverb/frank ocean - in my room (slowed + reverb).mp3'	 import room from '../Music/SlowReverb/frank ocean - in my room (slowed + reverb).mp3'
+ import crew from '../Music/SlowReverb/Goldlink - Crew (Slowed + Reverb).mp3'	 import crew from '../Music/SlowReverb/Goldlink - Crew (Slowed + Reverb).mp3'
+import pushin from '../Music/SlowReverb/gunna, future & young thug - pushin p. (slowed + reverb).mp3'	import pushin from '../Music/SlowReverb/gunna, future & young thug - pushin p. (slowed + reverb).mp3'
+import power from '../Music/SlowReverb/J. COLE + MIGUEL - POWER TRIP  ( s l o w e d   +   r e v e r b ).mp3'	import power from '../Music/SlowReverb/J. COLE + MIGUEL - POWER TRIP  ( s l o w e d   +   r e v e r b ).mp3'
+import lights from '../Music/SlowReverb/kanye west - flashing lights﹝slowed + reverb﹞.mp3'	import lights from '../Music/SlowReverb/kanye west - flashing lights﹝slowed + reverb﹞.mp3'
+import wonder from '../Music/SlowReverb/kanye west - i wonder﹝slowed + reverb﹞.mp3'	import wonder from '../Music/SlowReverb/kanye west - i wonder﹝slowed + reverb﹞.mp3'
+import dark from '../Music/SlowReverb/SLOW DANCING IN THE DARK [Slowed + Reverb] - Joji.mp3'	import dark from '../Music/SlowReverb/SLOW DANCING IN THE DARK [Slowed + Reverb] - Joji.mp3'
+import time from '../Music/SlowReverb/the weeknd - out of time﹝slowed + reverb﹞.mp3'	import time from '../Music/SlowReverb/the weeknd - out of time﹝slowed + reverb﹞.mp3'
+import vibe from '../Music/SlowReverb/bitch.mp3'	import vibe from '../Music/SlowReverb/bitch.mp3'
+import stars from '../Music/SlowReverb/kendrick Lamar, Sza - All The Stars - Tik tok version (SLOWED + REVERB).mp3'	import stars from '../Music/SlowReverb/kendrick Lamar, Sza - All The Stars - Tik tok version (SLOWED + REVERB).mp3'
+
+
+
+
+export const SlowReverbRadio  = [	export const SlowReverbRadio  = [
+        new Audio(lights),	        new Audio("https://www.mboxdrive.com/kanye west - flashing lights﹝slowed + reverb﹞.mp3"),
+        new Audio(time),	        new Audio("https://www.mboxdrive.com/the weeknd - out of time﹝slowed + reverb﹞.mp3"),
+        new Audio(wonder),	        new Audio("https://www.mboxdrive.com/kanye west - i wonder﹝slowed + reverb﹞.mp3"),
+        new Audio(noidea),	        new Audio("https://www.mboxdrive.com/don toliver - no idea [slowed & reverb].mp3"),
+        new Audio(hotline),	        new Audio("https://www.mboxdrive.com/drake - hotline bling﹝slowed + reverb﹞.mp3"),
+        new Audio(vibe),	        new Audio("https://www.mboxdrive.com/gunna, future & young thug - pushin p. (slowed + reverb).mp3"),
+        new Audio(stars),	        new Audio("https://www.mboxdrive.com/bitch.mp3"),
+        new Audio(room),	        new Audio("https://www.mboxdrive.com/kendrick Lamar, Sza - All The Stars - Tik tok version (SLOWED + REVERB).mp3"),
+        new Audio(caesar),	        new Audio("https://www.mboxdrive.com/frank ocean - in my room (slowed + reverb).mp3"),
+        new Audio(jungle),	        new Audio("https://www.mboxdrive.com/daniel caesar & kali uchis - get you﹝slowed + reverb﹞.mp3"),
+        new Audio(marvis),       	        new Audio("https://www.mboxdrive.com/drake - jungle(slowed+reverb).mp3"),
+        new Audio(crew),	        new Audio("https://www.mboxdrive.com/drake - marvins room﹝slowed + reverb﹞.mp3"),       
+        new Audio(pushin),	        new Audio("https://www.mboxdrive.com/Goldlink - Crew (Slowed + Reverb).mp3"),
+        new Audio(power), 	        new Audio("https://www.mboxdrive.com/J. COLE + MIGUEL - POWER TRIP ( s l o w e d + r e v e r b ).mp3"), 
+        new Audio(dark),	        new Audio("https://www.mboxdrive.com/SLOW DANCING IN THE DARK [Slowed + Reverb] - Joji.mp3"),
+
+
+]	]
